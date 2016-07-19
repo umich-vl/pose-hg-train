@@ -231,11 +231,11 @@ function shuffleLR(x)
             {11,16}, {12,15}, {13,14}
         }
     elseif opt.dataset == 'flic' then
-        matched_parts = {
+        matchedParts = {
             {1,4}, {2,5}, {3,6}, {7,8}, {9,10}
         }
     elseif opt.dataset == 'lsp' then
-        matched_parts = {
+        matchedParts = {
             {1,6}, {2,5}, {3,4}, {7,12}, {8,11}, {9,10}
         }
     end
