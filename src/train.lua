@@ -73,7 +73,7 @@ function step(tag)
         avgAcc = avgAcc + accuracy(output, label) / nIters
     end
 
-
+    opt.lastEpoch = epoch
     -- Print and log some useful metrics
     print(string.format("      %s : Loss: %.7f Acc: %.4f"  % {set, avgLoss, avgAcc}))
     if ref.log[set] then
