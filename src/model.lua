@@ -29,7 +29,8 @@ if opt.GPU ~= -1 then
     print('==> Converting model to CUDA')
     model:cuda()
     criterion:cuda()
-    
+    gpus=torch.range(1,cutorch.getDeviceCount()):totable()
+    model=nn.DataParallelTable(1):add(model, gpus):cuda()
     cudnn.fastest = true
     cudnn.benchmark = true
 end
