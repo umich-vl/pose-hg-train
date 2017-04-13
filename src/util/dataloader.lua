@@ -40,7 +40,7 @@ function DataLoader:__init(opt, dataset, ref, split)
     end
 
     local function main(idx)
-        torch.setnumthreads(1)
+        torch.setnumthreads(12)
         return dataset:size(split)
     end
 
